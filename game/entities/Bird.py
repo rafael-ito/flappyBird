@@ -8,7 +8,7 @@ class Bird:
         for i in range(1, 4)
     ]
     ROTATION_MAX = 25
-    ROTATION_SPEED = 20
+    ROTATION_SPEED = 5
     ANIMATION_TIME = 5
 
     def __init__(self, x, y):
@@ -37,7 +37,7 @@ class Bird:
             transition -= 2
         self.y += transition
 
-        if transition < 0 or self.y < (self.height + 50):
+        if transition < 0:
             if self.angle < self.ROTATION_MAX:
                 self.angle = self.ROTATION_MAX
         else:
